@@ -122,6 +122,38 @@ console.log("Skrip app.js berhasil terhubung!");
 // 3. Cetak hasil tierMember dan benefit ke Console.
 // 4. Tampilkan ringkasan hasil member (nama, total poin, tier, benefit) via dialog alert().
 
+// Menentukan tier berdasarkan total poin
+let tierMember;
+let benefitMember;
+
+if (totalPoin >= 100) {
+    tierMember = "Platinum";
+    benefitMember = "Diskon 20% + Gratis 1 Minuman Signature";
+} else if (totalPoin >= 70) {
+    tierMember = "Gold";
+    benefitMember = "Diskon 10% di setiap transaksi";
+} else if (totalPoin >= 40) {
+    tierMember = "Silver";
+    benefitMember = "Diskon 5% untuk menu minuman";
+} else {
+    tierMember = "Bronze";
+    benefitMember = "Member Reguler (kumpulkan poin untuk naik tier)";
+}
+
+console.log("=== TIER MEMBERSHIP ===");
+console.log("Nama Pelanggan : " + namaPelanggan);
+console.log("Total Poin     : " + totalPoin);
+console.log("Tier Member    : " + tierMember);
+console.log("Benefit        : " + benefitMember);
+
+alert(
+    "=== STATUS MEMBER ===\n" +
+    "Nama: " + namaPelanggan + "\n" +
+    "Total Poin: " + totalPoin + "\n" +
+    "Tier: " + tierMember + "\n" +
+    "Benefit: " + benefitMember
+);
+
 
 
 
@@ -132,6 +164,40 @@ console.log("Skrip app.js berhasil terhubung!");
 // TODO 5A:
 // Buat fungsi "hitungTotalPoin(p1, p2, p3)" yang menerima 3 parameter nilai poin,
 // menjumlahkannya, dan mengembalikan (return) nilai total penjumlahannya.
+// Function untuk menghitung total poin
+    function hitungTotalPoin(p1, p2, p3) {
+        return p1 + p2 + p3;
+    }
+
+    // Function untuk menentukan tier member
+    function tentukanTierMember(poin) {
+        if (poin >= 100) {
+            return "Platinum - Diskon 20% + Gratis 1 Minuman Signature";
+        } else if (poin >= 70) {
+            return "Gold - Diskon 10% di setiap transaksi";
+        } else if (poin >= 40) {
+            return "Silver - Diskon 5% untuk menu minuman";
+        } else {
+            return "Bronze - Member Reguler (kumpulkan poin untuk naik tier)";
+        }
+    }
+
+    // Testing function dengan Pelanggan B
+    let totalPoinB = hitungTotalPoin(30, 25, 20);
+    let tierB = tentukanTierMember(totalPoinB);
+
+    console.log("=== PELANGGAN B ===");
+    console.log("Total Poin : " + totalPoinB);
+    console.log("Tier       : " + tierB);
+
+    // Testing function dengan Pelanggan C
+    let totalPoinC = hitungTotalPoin(50, 30, 25);
+    let tierC = tentukanTierMember(totalPoinC);
+
+    console.log("=== PELANGGAN C ===");
+    console.log("Total Poin : " + totalPoinC);
+    console.log("Tier       : " + tierC);
+
 
 
 
