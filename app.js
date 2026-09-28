@@ -25,7 +25,7 @@
 console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 
 // TODO 1: Tulis satu baris console.log() untuk memastikan file app.js sudah terhubung!
-// Contoh output: "Skrip app.js berhasil terhubung!"
+console.log("Skrip app.js berhasil terhubung!");
 
 
 
@@ -40,6 +40,14 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 2. Buat variabel "namaKasir" (misal: "Kak Eko") dan "shiftKerja" menggunakan "let".
 // 3. Cetak nilai NAMA_KEDAI, namaKasir, dan shiftKerja ke Console menggunakan console.log().
 
+    const NAMA_KEDAI = "Kopi PSTI Kampus";
+    let namaKasir = "Kak Eko";
+    let shiftKerja = "Pagi";
+
+    console.log("Nama Kedai : " + NAMA_KEDAI);
+    console.log("Nama Kasir : " + namaKasir);
+    console.log("Shift Kerja : " + shiftKerja);
+
 
 
 
@@ -47,7 +55,8 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // TODO 2B:
 // Ubah (re-assign) nilai variabel "namaKasir" dengan nama kasir lain,
 // lalu cetak ke Console untuk membuktikan bahwa variabel "let" nilainya dapat diubah.
-
+    namaKasir = "Kak Tiara";
+    console.log("Nama Kasir Baru : " + namaKasir);
 
 
 
@@ -58,7 +67,18 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 // 3. Gunakan percabangan "if - else":
 //    - JIKA namaPelanggan ada isinya: tampilkan alert sapaan dan log ke console.
 //    - JIKA namaPelanggan kosong / klik Cancel: beri nilai default "Pelanggan Setia" dan tampilkan alert pemberitahuan.
+    alert("Selamat datang di Sistem Poin Member Kedai Kopi!");
 
+    let namaPelanggan = prompt("Masukkan nama pelanggan:");
+
+    if (namaPelanggan) {
+        alert("Halo, " + namaPelanggan + "! Selamat berbelanja.");
+        console.log("Pelanggan aktif : " + namaPelanggan);
+    } else {
+        namaPelanggan = "Pelanggan Setia";
+        alert("Nama tidak dimasukkan. Anda akan menggunakan nama default: Pelanggan Setia.");
+        console.log("Pelanggan aktif : " + namaPelanggan);
+    }
 
 
 
@@ -72,6 +92,18 @@ console.log("=== SISTEM POIN MEMBER KEDAI KOPI ===");
 //    (isi dengan angka bulat bebas, misal: 45, 35, 20).
 // 2. Buat variabel "totalPoin" yang menjumlahkan ketiga variabel poin di atas.
 // 3. Cetak rincian perolehan poin dan totalPoin ke Console menggunakan console.log().
+
+    let poinKopi = 45;
+    let poinMakanan = 35;
+    let poinMerchandise = 20;
+
+    let totalPoin = poinKopi + poinMakanan + poinMerchandise;
+
+    console.log("=== RINCIAN POIN PELANGGAN ===");
+    console.log("Poin Kopi        : " + poinKopi);
+    console.log("Poin Makanan     : " + poinMakanan);
+    console.log("Poin Merchandise : " + poinMerchandise);
+    console.log("Total Poin       : " + totalPoin);
 
 
 
